@@ -17,7 +17,7 @@ export const HomePage=()=>{
     return questions
   })
   useEffect(()=>{
-    getQuestions("react1")
+    getQuestions("react")
   },[])
 
     return <>
