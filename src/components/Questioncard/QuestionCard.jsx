@@ -14,10 +14,12 @@ export const QuestionCard=({card})=>{
         <Badge variant={levelVariant}>Level:{card.level}</Badge>
         <Badge variant={completedVariant}> {card.completed ? "Completed": "Not completed"}</Badge>
     </div>
+
     <h5 className={cls.cardTitle}>{card.question}</h5>
+
     <div className={cls.cardAnswers}>
-        <label>{card.answer} </label>
-        <p className={cls.cardAnswer}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, labore.</p>
+        <label>short answer: </label>
+        <p className={cls.cardAnswer}>{card.answer}</p>
     </div> 
     <Button onClick={()=>navigate(`/question/${card.id}`)}>View</Button>
     </div>
