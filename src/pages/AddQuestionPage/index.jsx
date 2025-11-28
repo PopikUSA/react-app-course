@@ -1,1 +1,3 @@
-export {AddQuestionPage} from "./AddQuestionPage"
+export { deafult as AddQuestionPage} from "./AddQuestionPage"
+
+export { default as AddQuestionPageLazy} from "./AddQuestionPage.lazy"
