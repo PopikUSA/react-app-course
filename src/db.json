@@ -598,6 +598,15 @@
       ],
       "level": 2,
       "completed": false
+    },
+    {
+      "id": "c50f",
+      "question": "Как дела попик?",
+      "answer": "нормикс",
+      "description": "вполне нормально",
+      "resources": [],
+      "level": 1,
+      "completed": false
     }
   ]
 }
