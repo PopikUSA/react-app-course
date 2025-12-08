@@ -6,6 +6,7 @@ import { useId, useState, useEffect} from 'react'
 import { useFetch } from '../../hooks/useFetch'
 import { API_URL } from '../../constants'
 import { Loader, SmallLoader } from '../../components/Loader'
+import {useAuth} from '../../hooks/useAuth'
 
 
 export const QuestionPage=()=>{
@@ -14,6 +15,7 @@ export const QuestionPage=()=>{
     const {id}=useParams()
     const [card, setCard]=useState(null)
     const [isChecked, setIsChecked]=useState(true)
+    const {isAuth}=useAuth()
 
 
     const levelVariant=()=>card.level===1? "primary": card.level===2 ? "warning" : "alert"
@@ -90,7 +92,7 @@ export const QuestionPage=()=>{
         {isCardUpdating && <SmallLoader/>}
     </label>
 
-    <Button onClick={()=>navigate(`/editquestion/${card.id}`)} isDisabled={isCardUpdating}>Edit Question</Button>
+    {isAuth &&<Button onClick={()=>navigate(`/editquestion/${card.id}`)} isDisabled={isCardUpdating}>Edit Question</Button>}
     <Button onClick={()=>navigate(`/`)} isDisabled={isCardUpdating}>Back</Button>
     </div>
     }
