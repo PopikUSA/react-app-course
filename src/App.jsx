@@ -9,6 +9,7 @@ import {  EditQuestionPageLazy } from "./pages/EditQuestionPage";
 import { AuthProvider } from "./auth/AuthProvider";
 import { useAuth } from "./hooks/useAuth";
 import { ForbiddenPage } from "./pages/ForbiddenPage";
+import { ThemeProvider } from "./theme/ThemeProvider";
 
 const ProtectedRoutes=()=>{
   const {isAuth}=useAuth()
@@ -18,7 +19,8 @@ const ProtectedRoutes=()=>{
 }
 
 function App() {
-  return <AuthProvider>
+  return <ThemeProvider>
+    <AuthProvider>
    <BrowserRouter>
   <Routes>
     <Route element={<MainLayout/>}>
@@ -37,6 +39,7 @@ function App() {
   </Routes>
   </BrowserRouter>
   </AuthProvider>
+  </ThemeProvider>
 }
 
 export default App;
