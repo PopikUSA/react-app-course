@@ -8,6 +8,7 @@ import { API_URL } from "../../constants"
 import { toast } from "react-toastify"
 import { useFetch } from "../../hooks/useFetch"
 import { useNavigate } from "react-router-dom"
+import { EditQuestionPage } from "./EditQuestionPage"
 
 const editCardAction=async(_prevState, formData)=>{
     try{
@@ -77,3 +78,4 @@ export const EditQuestion=({initialState={}})=>{
     
     </>
 }
+
